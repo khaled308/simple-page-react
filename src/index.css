@@ -1,0 +1,150 @@
+/* start global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* small */
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medium */
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/* large */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 12px;
+    }
+}
+#root{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 75px;
+    height: 100vh;
+}
+/* end global */
+/* start nav */
+nav{
+    padding: .5rem 0;
+    background-color: #14c8f5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+nav .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-height: 60px;
+    align-items: center;
+}
+nav h1{
+    font-size: 1rem;
+}
+.right ul {
+    display: flex;
+    gap: .08rem;
+}
+nav .icon{
+    display: none;
+}
+.hidden-links{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 75px;
+    z-index: 1;
+    background-color: #14c8f5;
+}
+@media (max-width: 768px) {
+    nav .links {
+        display: none;
+    }
+    nav .icon{
+        display: block;
+    }
+    nav .appear{
+        display: block;
+    }
+}
+
+/* end nav */
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.home .txt{
+    margin-bottom: 20px;
+}
+.home .txt h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.home .txt p{
+    font-size: 1rem;
+}
+footer{
+    background-color: #555;
+}
+footer .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    color: #fff;
+}
